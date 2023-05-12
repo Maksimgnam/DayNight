@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            color: white;
+            font-size: 60px;
+            font-weight: 900;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: relative;
+            left: 70px;
+            letter-spacing: 3px;
+
+
+        }
+
+
+
+        .block {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+            left: 450px;
+            top: -200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+
+        <p id="p"></p>
+        <div class="block" id="block"></div>
+
+
+    </div>
+
+    <script>
+        let switcher = new Date().getHours();
+
+
+        function MornAndEven() {
+            if (switcher >= 6 && switcher < 12) {
+                wrap.style.backgroundColor = 'lightblue';
+                block.style.backgroundColor = 'yellow';
+                p.innerText = 'Morning';
+                block.style.boxShadow = "0 0 30px yellow"
+
+
+
+            }
+
+            else if (switcher >= 6 && switcher < 15) {
+                wrap.style.backgroundColor = 'lightsalmon';
+                block.style.backgroundColor = 'yellow';
+                p.innerText = 'Afternoon';
+                block.style.boxShadow = "0 0 30px yellow"
+
+
+            }
+            else if (switcher >= 6 && switcher < 18) {
+                wrap.style.backgroundColor = 'orange';
+                block.style.backgroundColor = 'yellow';
+                p.innerText = 'Middle';
+                block.style.boxShadow = "0 0 30px yellow"
+
+            }
+
+
+
+
+
+
+            else {
+                wrap.style.backgroundColor = 'black';
+                block.style.backgroundColor = 'white';
+                p.innerText = 'Evening';
+                block.style.boxShadow = "0 0 30px #ccc"
+
+
+            }
+
+
+        }
+
+        MornAndEven()
+
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>
